@@ -11,6 +11,9 @@
     "lint": "eslint ."
   },
   "dependencies": {
+    "@nordhealth/components": "^3.18.2",
+    "@nordhealth/css": "^3.3.1",
+    "@nordhealth/vue": "^3.18.2",
     "@nuxt/eslint": "^0.5.7",
     "nuxt": "^3.13.0",
     "vue": "latest",

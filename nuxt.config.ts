@@ -4,4 +4,10 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   ssr: false,
   modules: ['@nuxt/eslint'],
+  vue: {
+    compilerOptions: {
+      isCustomElement: (tag) => tag.includes("-"),
+    },
+  },
+  css: ['@nordhealth/css']
 })
