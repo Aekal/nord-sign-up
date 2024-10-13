@@ -1,13 +1,31 @@
 <script setup lang="ts">
+import type { Input } from "@nordhealth/components";
+
 const email = ref<string>('');
 const password = ref<string>('');
+const emailInputRef = ref<Input>();
+const passwordInputRef = ref<Input>();
 const isValidationEnabled = ref<boolean>(false);
 const isPasswordVisible = ref<boolean>(false);
 const passwordIconName = computed(() => isPasswordVisible.value ? 'interface-edit-off' : 'interface-edit-on');
 
-const onSubmit = () => {
+const validateForm = () => {
   isValidationEnabled.value = true;
+  if (!password.value) {
+    passwordInputRef.value?.focus();
+  } else if (!email.value) {
+    emailInputRef.value?.focus();
+  }
 }
+const onSubmit = () => {
+  validateForm();
+}
+
+onMounted(() => {
+  nextTick(() => {
+    emailInputRef.value?.focus()
+  })
+})
 </script>
 
 <template>
@@ -16,6 +34,7 @@ const onSubmit = () => {
     <form @submit.prevent="onSubmit">
       <nord-stack>
         <nord-input
+          ref="emailInputRef"
           v-model="email"
           label="Email"
           expand
@@ -25,6 +44,7 @@ const onSubmit = () => {
         />
 
         <nord-input
+          ref="passwordInputRef"
           v-model="password"
           label="Password"
           expand
