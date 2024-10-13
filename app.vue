@@ -1,5 +1,11 @@
 <template>
-  <div>
+  <main class="n-reset n-stack-horizontal mt-10vh">
     <NuxtPage />
-  </div>
+  </main>
 </template>
+
+<style scoped>
+.mt-10vh {
+  margin-top: 10vh;
+}
+</style>
