@@ -2,6 +2,8 @@
 const email = ref<string>('');
 const password = ref<string>('');
 const isValidationEnabled = ref<boolean>(false);
+const isPasswordVisible = ref<boolean>(false);
+const passwordIconName = computed(() => isPasswordVisible.value ? 'interface-edit-off' : 'interface-edit-on');
 
 const onSubmit = () => {
   isValidationEnabled.value = true;
@@ -18,7 +20,6 @@ const onSubmit = () => {
           label="Email"
           expand
           type="email"
-          name="email"
           placeholder="user@example.com"
           :error="isValidationEnabled && !email ? 'Email is required' : undefined"
         />
@@ -27,11 +28,19 @@ const onSubmit = () => {
           v-model="password"
           label="Password"
           expand
-          type="password"
-          name="password"
+          :type="isPasswordVisible ? 'text' : 'password'"
           placeholder="••••••••••"
           :error="isValidationEnabled && !password ? 'Password is required' : undefined"
-        />
+        >
+          <nord-button
+            slot="end"
+            type="button"
+            square
+            @click="isPasswordVisible = !isPasswordVisible"
+          >
+            <nord-icon size="l" :name="passwordIconName" />
+          </nord-button>
+        </nord-input>
 
         <nord-button type="submit" expand variant="primary">
           Sign up
