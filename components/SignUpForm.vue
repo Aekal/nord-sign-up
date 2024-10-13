@@ -4,6 +4,7 @@ import type { Input } from "@nordhealth/components";
 const email = ref<string>('');
 const password = ref<string>('');
 const emailInputRef = ref<Input>();
+const optionalAgreement = ref<boolean>(false);
 const passwordInputRef = ref<Input>();
 const isValidationEnabled = ref<boolean>(false);
 const isPasswordVisible = ref<boolean>(false);
@@ -42,7 +43,6 @@ onMounted(() => {
           placeholder="user@example.com"
           :error="isValidationEnabled && !email ? 'Email is required' : undefined"
         />
-
         <nord-input
           ref="passwordInputRef"
           v-model="password"
@@ -61,7 +61,11 @@ onMounted(() => {
             <nord-icon size="l" :name="passwordIconName" />
           </nord-button>
         </nord-input>
-
+        <nord-checkbox
+          v-model="optionalAgreement"
+          type="checkbox"
+          label="I want to receive occasional product updates and announcements"
+        />
         <nord-button type="submit" expand variant="primary">
           Sign up
         </nord-button>
