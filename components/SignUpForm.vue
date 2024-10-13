@@ -10,21 +10,27 @@ const isValidationEnabled = ref<boolean>(false);
 const isPasswordVisible = ref<boolean>(false);
 const passwordIconName = computed(() => isPasswordVisible.value ? 'interface-edit-off' : 'interface-edit-on');
 
-const validateForm = () => {
+const isFormValid = (): boolean => {
   isValidationEnabled.value = true;
+  if (!email.value) {
+    emailInputRef.value?.focus();
+    return false;
+  }
   if (!password.value) {
     passwordInputRef.value?.focus();
-  } else if (!email.value) {
-    emailInputRef.value?.focus();
+    return false;
   }
+  return true;
 }
 const onSubmit = () => {
-  validateForm();
+  if (isFormValid()) {
+    navigateTo({ name: 'success' });
+  }
 }
 
 onMounted(() => {
   nextTick(() => {
-    emailInputRef.value?.focus()
+    emailInputRef.value?.focus();
   })
 })
 </script>
@@ -73,10 +79,3 @@ onMounted(() => {
     </form>
   </nord-card>
 </template>
-
-<style scoped>
-.centered-box {
-  max-width: 400px;
-  margin: 0 auto;
-}
-</style>
