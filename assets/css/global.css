@@ -1,4 +1,12 @@
+body {
+  background-color: var(--n-color-background);
+}
+
 .centered-box {
   max-width: 400px;
   margin: 0 auto;
+}
+
+.mt-10vh {
+  margin-top: 10vh;
 }

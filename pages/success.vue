@@ -10,6 +10,7 @@ definePageMeta({
 
 <template>
   <nord-stack class="centered-box">
+    <h1>Success</h1>
     <nord-banner variant="success">
       You've successfully signed up!
     </nord-banner>

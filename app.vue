@@ -3,9 +3,3 @@
     <NuxtPage />
   </main>
 </template>
-
-<style scoped>
-.mt-10vh {
-  margin-top: 10vh;
-}
-</style>
