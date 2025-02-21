@@ -9,10 +9,10 @@ definePageMeta({
 </script>
 
 <template>
-  <nord-stack class="centered-box">
+  <provet-stack class="centered-box">
     <h1>Success</h1>
-    <nord-banner variant="success">
+    <provet-banner variant="success">
       You've successfully signed up!
-    </nord-banner>
-  </nord-stack>
+    </provet-banner>
+  </provet-stack>
 </template>

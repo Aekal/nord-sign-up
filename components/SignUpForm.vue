@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { Input } from "@nordhealth/components";
+import type { Input } from "@provetcloud/web-components";
 
 const email = ref<string>('');
 const password = ref<string>('');
@@ -36,11 +36,11 @@ onMounted(() => {
 </script>
 
 <template>
-  <nord-card padding="l" class="centered-box">
+  <provet-card padding="l" class="centered-box">
     <h1 slot="header">Sign up</h1>
     <form @submit.prevent="onSubmit">
-      <nord-stack>
-        <nord-input
+      <provet-stack>
+        <provet-input
           ref="emailInputRef"
           v-model="email"
           label="Email"
@@ -49,7 +49,7 @@ onMounted(() => {
           placeholder="user@example.com"
           :error="isValidationEnabled && !email ? 'Email is required' : undefined"
         />
-        <nord-input
+        <provet-input
           ref="passwordInputRef"
           v-model="password"
           label="Password"
@@ -58,24 +58,24 @@ onMounted(() => {
           placeholder="••••••••••"
           :error="isValidationEnabled && !password ? 'Password is required' : undefined"
         >
-          <nord-button
+          <provet-button
             slot="end"
             type="button"
             square
             @click="isPasswordVisible = !isPasswordVisible"
           >
-            <nord-icon size="l" :name="passwordIconName" />
-          </nord-button>
-        </nord-input>
-        <nord-checkbox
+            <provet-icon size="l" :name="passwordIconName" />
+          </provet-button>
+        </provet-input>
+        <provet-checkbox
           v-model="optionalAgreement"
           type="checkbox"
           label="I want to receive occasional product updates and announcements"
         />
-        <nord-button type="submit" expand variant="primary">
+        <provet-button type="submit" expand variant="primary">
           Sign up
-        </nord-button>
-      </nord-stack>
+        </provet-button>
+      </provet-stack>
     </form>
-  </nord-card>
+  </provet-card>
 </template>

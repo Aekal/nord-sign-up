@@ -9,5 +9,5 @@ export default defineNuxtConfig({
       isCustomElement: (tag) => tag.includes("-"),
     },
   },
-  css: ['@nordhealth/css', '@/assets/css/global.css']
+  css: ['@provetcloud/css', '@/assets/css/global.css']
 })

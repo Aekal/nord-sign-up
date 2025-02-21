@@ -1,3 +1,3 @@
-import '@nordhealth/components'
+import '@provetcloud/web-components'
 
 export default defineNuxtPlugin(() => {})
