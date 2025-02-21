@@ -10,9 +10,9 @@ definePageMeta({
 
 <template>
   <provet-stack class="centered-box">
-    <h1>Success</h1>
+    <h1>{{ $t('signUpSuccess.title') }}</h1>
     <provet-banner variant="success">
-      You've successfully signed up!
+      {{ $t('signUpSuccess.message') }}
     </provet-banner>
   </provet-stack>
 </template>

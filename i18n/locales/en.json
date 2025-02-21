@@ -1,0 +1,15 @@
+{
+  "signUp": {
+    "title": "Sign Up",
+    "email": "Email",
+    "password": "Password",
+    "optionalAgreement": "I want to receive occasional product updates and announcements",
+    "submit": "Sign Up",
+    "emailRequired": "Email is required",
+    "passwordRequired": "Password is required"
+  },
+  "signUpSuccess": {
+    "title": "Success",
+    "message": "You've successfully signed up!"
+  }
+}

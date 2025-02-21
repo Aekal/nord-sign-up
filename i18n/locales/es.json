@@ -1,0 +1,15 @@
+{
+  "signUp": {
+    "title": "Registrarse",
+    "email": "Correo electrónico",
+    "password": "Contraseña",
+    "optionalAgreement": "Quiero recibir actualizaciones y anuncios ocasionales del producto",
+    "submit": "Registrarse",
+    "emailRequired": "El correo electrónico es obligatorio",
+    "passwordRequired": "La contraseña es obligatoria"
+  },
+  "signUpSuccess": {
+    "title": "Éxito",
+    "message": "¡Te has registrado con éxito!"
+  }
+}

@@ -1,5 +1,5 @@
 <template>
   <footer>
-    Footer
+    <LangSwitcher />
   </footer>
 </template>
