@@ -1,7 +1,7 @@
 <template>
-  <div>
+  <div class="n-reset">
     <AppHeader />
-    <main class="n-reset n-stack-horizontal mt-10vh">
+    <main>
       <NuxtPage />
     </main>
     <AppFooter />

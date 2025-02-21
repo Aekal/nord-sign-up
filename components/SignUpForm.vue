@@ -24,6 +24,7 @@ const isFormValid = (): boolean => {
 }
 const onSubmit = () => {
   if (isFormValid()) {
+    localStorage.setItem('formSubmitted', 'true')
     navigateTo({ name: 'success' });
   }
 }

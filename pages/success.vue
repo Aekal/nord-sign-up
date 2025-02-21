@@ -1,10 +1,6 @@
 <script setup>
 definePageMeta({
-  middleware: defineNuxtRouteMiddleware((_to, from) => {
-    if (from.name !== 'index') {
-      return navigateTo({ name: 'index' });
-    }
-  }),
+  middleware: ['form-submitted'],
 })
 </script>
 
