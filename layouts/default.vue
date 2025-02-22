@@ -1,9 +1,7 @@
 <template>
-  <div class="n-reset">
-    <AppHeader />
-    <main>
-      <NuxtPage />
-    </main>
-    <AppFooter />
-  </div>
+  <provet-layout class="n-reset" sticky-footer>
+    <AppHeader slot="header" />
+    <NuxtPage />
+    <AppFooter slot="footer" />
+  </provet-layout>
 </template>

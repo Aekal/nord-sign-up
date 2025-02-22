@@ -1,5 +1,5 @@
 <template>
-  <footer>
+  <provet-footer>
     <LangSwitcher />
-  </footer>
+  </provet-footer>
 </template>

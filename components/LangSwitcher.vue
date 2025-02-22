@@ -18,7 +18,7 @@ const onDropdownItemClick = (langCode: 'en' | 'es' | 'fr') => {
 </script>
 
 <template>
-  <provet-dropdown ref="dropdownRef" size="s">
+  <provet-dropdown ref="dropdownRef">
     <provet-button slot="toggle">{{ currentLocale?.name }}</provet-button>
     <provet-dropdown-item
       v-for="availableLocale in availableLocales"
