@@ -1,33 +1,25 @@
 <script setup lang="ts">
 import type { Input } from "@provetcloud/web-components";
+import { object, string } from 'yup'
 
-const email = ref<string>('');
-const password = ref<string>('');
 const emailInputRef = ref<Input>();
 const optionalAgreement = ref<boolean>(false);
-const passwordInputRef = ref<Input>();
-const isValidationEnabled = ref<boolean>(false);
 const isPasswordVisible = ref<boolean>(false);
 const passwordIconName = computed(() => isPasswordVisible.value ? 'interface-edit-off' : 'interface-edit-on');
 
-const isFormValid = (): boolean => {
-  isValidationEnabled.value = true;
-  if (!email.value) {
-    emailInputRef.value?.focus();
-    return false;
-  }
-  if (!password.value) {
-    passwordInputRef.value?.focus();
-    return false;
-  }
-  return true;
-}
-const onSubmit = () => {
-  if (isFormValid()) {
-    localStorage.setItem('formSubmitted', 'true')
-    navigateTo({ name: 'success' });
-  }
-}
+const { errors, defineField, handleSubmit } = useForm({
+  validationSchema: object({
+    email: string().email('validation.email').required('validation.required.email'),
+    password: string().min(8, 'validation.password').required('validation.required.password')
+  }),
+});
+const [email] = defineField('email');
+const [password] = defineField('password');
+
+const onSubmit = handleSubmit(() => {
+  localStorage.setItem('formSubmitted', 'true')
+  navigateTo({ name: 'success' });
+});
 
 onMounted(() => {
   nextTick(() => {
@@ -48,7 +40,7 @@ onMounted(() => {
           expand
           type="email"
           placeholder="user@example.com"
-          :error="isValidationEnabled && !email ? $t('signUp.emailRequired') : undefined"
+          :error="errors.email ? $t(errors.email) : undefined"
         />
         <provet-input
           ref="passwordInputRef"
@@ -57,7 +49,7 @@ onMounted(() => {
           expand
           :type="isPasswordVisible ? 'text' : 'password'"
           placeholder="••••••••••"
-          :error="isValidationEnabled && !password ? $t('signUp.passwordRequired') : undefined"
+          :error="errors.password ? $t(errors.password) : undefined"
         >
           <provet-button
             slot="end"

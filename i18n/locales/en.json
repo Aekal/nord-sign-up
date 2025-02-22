@@ -4,12 +4,18 @@
     "email": "Email",
     "password": "Password",
     "optionalAgreement": "I want to receive occasional product updates and announcements",
-    "submit": "Sign Up",
-    "emailRequired": "Email is required",
-    "passwordRequired": "Password is required"
+    "submit": "Sign Up"
   },
   "signUpSuccess": {
     "title": "Success",
     "message": "You've successfully signed up!"
+  },
+  "validation": {
+    "email": "Email must be a valid email",
+    "password": "Password must be at least 8 characters",
+    "required": {
+      "email": "Email is required",
+      "password": "Password is required"
+    }
   }
 }

@@ -4,7 +4,7 @@ export default defineNuxtConfig({
   compatibilityDate: '2024-04-03',
   devtools: { enabled: true },
   ssr: false,
-  modules: ['@nuxt/eslint', '@nuxtjs/i18n'],
+  modules: ['@nuxt/eslint', '@nuxtjs/i18n', '@vee-validate/nuxt'],
   vue: {
     compilerOptions: {
       isCustomElement: (tag) => tag.includes("-"),

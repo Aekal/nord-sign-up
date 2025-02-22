@@ -20,6 +20,12 @@ importers:
       '@provetcloud/web-components':
         specifier: ^1.3.2
         version: 1.3.2
+      '@vee-validate/nuxt':
+        specifier: ^4.15.0
+        version: 4.15.0(magicast@0.3.5)(vue@3.5.13(typescript@5.7.3))
+      '@vee-validate/yup':
+        specifier: ^4.15.0
+        version: 4.15.0(vue@3.5.13(typescript@5.7.3))(yup@1.6.1)
       nuxt:
         specifier: ^3.15.4
         version: 3.15.4(@parcel/watcher@2.4.1)(@types/node@22.7.5)(db0@0.2.4)(eslint@9.12.0(jiti@2.4.2))(ioredis@5.4.1)(magicast@0.3.5)(optionator@0.9.4)(rollup@4.34.8)(terser@5.34.1)(typescript@5.7.3)(vite@6.1.1(@types/node@22.7.5)(jiti@2.4.2)(terser@5.34.1)(yaml@2.7.0))(yaml@2.7.0)
@@ -29,6 +35,9 @@ importers:
       vue-router:
         specifier: latest
         version: 4.5.0(vue@3.5.13(typescript@5.7.3))
+      yup:
+        specifier: ^1.6.1
+        version: 1.6.1
     devDependencies:
       '@provetcloud/web-components-vue-types':
         specifier: ^1.3.2
@@ -1094,6 +1103,14 @@ packages:
     peerDependencies:
       vue: '>=2.7 || >=3'
 
+  '@vee-validate/nuxt@4.15.0':
+    resolution: {integrity: sha512-AhQHPLxH4tTf35op+ifkBhnnRwv/EzT8Fi9PQlEwKyLGZgepFQO1qTm6IyaA6aoSKcFWHz3R3hyMrMQdXbiOxQ==}
+
+  '@vee-validate/yup@4.15.0':
+    resolution: {integrity: sha512-paK2ZdxZJRrUGwqaqf7KMNC+n5C7UGs7DofK7wZCza/zKT/QtFSxVYgopGoYYrbAfd6DpVmNpf/ouBuRdPBthA==}
+    peerDependencies:
+      yup: ^1.3.2
+
   '@vercel/nft@0.27.10':
     resolution: {integrity: sha512-zbaF9Wp/NsZtKLE4uVmL3FyfFwlpDyuymQM1kPbeT0mVOHKDQQNjnnfslB3REg3oZprmNFJuh3pkHBk2qAaizg==}
     engines: {node: '>=16'}
@@ -1153,6 +1170,9 @@ packages:
   '@vue/devtools-api@6.6.4':
     resolution: {integrity: sha512-sGhTPMuXqZ1rVOk32RylztWkfXTRhuS7vgAKv0zjqk8gbsHkJ7xfFf+jbySxt7tWObEJwyKaHMikV/WGDiQm8g==}
 
+  '@vue/devtools-api@7.7.2':
+    resolution: {integrity: sha512-1syn558KhyN+chO5SjlZIwJ8bV/bQ1nOVTG66t2RbG66ZGekyiYNmRO7X9BJCXQqPsFHlnksqvPhce2qpzxFnA==}
+
   '@vue/devtools-core@7.6.8':
     resolution: {integrity: sha512-8X4roysTwzQ94o7IobjVcOd1aZF5iunikrMrHPI2uUdigZCi2kFTQc7ffYiFiTNaLElCpjOhCnM7bo7aK1yU7A==}
     peerDependencies:
@@ -1160,6 +1180,9 @@ packages:
 
   '@vue/devtools-kit@7.6.8':
     resolution: {integrity: sha512-JhJ8M3sPU+v0P2iZBF2DkdmR9L0dnT5RXJabJqX6o8KtFs3tebdvfoXV2Dm3BFuqeECuMJIfF1aCzSt+WQ4wrw==}
+
+  '@vue/devtools-kit@7.7.2':
+    resolution: {integrity: sha512-CY0I1JH3Z8PECbn6k3TqM1Bk9ASWxeMtTCvZr7vb+CHi+X/QwQm5F1/fPagraamKMAHVfuuCbdcnNg1A4CYVWQ==}
 
   '@vue/devtools-shared@7.7.2':
     resolution: {integrity: sha512-uBFxnp8gwW2vD6FrJB8JZLUzVb6PNRG0B0jBnHsOH8uKyva2qINY8PTF5Te4QlTbMDqU5K6qtJDr6cNsKWhbOA==}
@@ -3034,6 +3057,9 @@ packages:
     resolution: {integrity: sha512-NxNv/kLguCA7p3jE8oL2aEBsrJWgAakBpgmgK6lpPWV+WuOmY6r2/zbAVnP+T8bQlA0nzHXSJSJW0Hq7ylaD2Q==}
     engines: {node: '>= 6'}
 
+  property-expr@2.0.6:
+    resolution: {integrity: sha512-SVtmxhRE/CGkn3eZY1T6pC8Nln6Fr/lu1mKSgRud0eC73whjGfoAogbn78LkD8aFL0zz3bAFerKSnOl7NlErBA==}
+
   protocols@2.0.1:
     resolution: {integrity: sha512-/XJ368cyBJ7fzLMwLKv1e4vLxOju2MNAIokcr7meSaNcVbWz/CPcW22cP04mwxOErdA5mwjA8Q6w/cdAQxVn7Q==}
 
@@ -3420,6 +3446,9 @@ packages:
   thenify@3.3.1:
     resolution: {integrity: sha512-RVZSIV5IG10Hk3enotrhvz0T9em6cyHBLkH/YAZuKqd8hRkKhSfCGIcP2KUY0EPxndzANBmNllzWPwak+bheSw==}
 
+  tiny-case@1.0.3:
+    resolution: {integrity: sha512-Eet/eeMhkO6TX8mnUteS9zgPbUMQa4I6Kkp5ORiBD5476/m+PIRiumP5tmh5ioJpH7k51Kehawy2UDfsnxxY8Q==}
+
   tiny-invariant@1.3.3:
     resolution: {integrity: sha512-+FbBPE1o9QAYvviau/qC5SE3caw21q3xkvWKBtja5vgqOWIHHJ3ioaq1VPfn/Szqctz2bU/oYeKd9/z5BL+PVg==}
 
@@ -3444,6 +3473,9 @@ packages:
   toidentifier@1.0.1:
     resolution: {integrity: sha512-o5sSPKEkg/DIQNmH43V0/uerLrpzVedkUh8tGNvaeXpfpuwjKenlSox/2O/BTlZUtEe+JG7s5YhEz608PlAHRA==}
     engines: {node: '>=0.6'}
+
+  toposort@2.0.2:
+    resolution: {integrity: sha512-0a5EOkAUp8D4moMi2W8ZF8jcga7BgZd91O/yabJCFY8az+XSzeGyTKs0Aoo897iV1Nj6guFq8orWDS96z91oGg==}
 
   tosource@2.0.0-alpha.3:
     resolution: {integrity: sha512-KAB2lrSS48y91MzFPFuDg4hLbvDiyTjOVgaK7Erw+5AmZXNq4sFRVn8r6yxSLuNs15PaokrDRpS61ERY9uZOug==}
@@ -3479,6 +3511,10 @@ packages:
   type-fest@0.21.3:
     resolution: {integrity: sha512-t0rzBq87m3fVcduHDUFhKmyyX+9eo6WQjZvf51Ea/M0Q7+T374Jp1aUiyUl0GKxp8M/OETVHSDvmkyPgvX+X2w==}
     engines: {node: '>=10'}
+
+  type-fest@2.19.0:
+    resolution: {integrity: sha512-RAH822pAdBgcNMAfWnCBU3CFZcfZ/i1eZjwFU/dsLKumyuuP3niueg2UAukXYF0E2AAoc82ZSSf9J0WQBinzHA==}
+    engines: {node: '>=12.20'}
 
   type-fest@4.35.0:
     resolution: {integrity: sha512-2/AwEFQDFEy30iOLjrvHDIH7e4HEWH+f1Yl1bI5XMqzuoCUqwYCdxachgsgv0og/JdVZUhbfjcJAoHj5L1753A==}
@@ -3658,6 +3694,11 @@ packages:
 
   validate-npm-package-license@3.0.4:
     resolution: {integrity: sha512-DpKm2Ui/xN7/HQKCtpZxoRWBhZ9Z0kqtygG8XCgNQ8ZlDnxuQmWhj566j8fN4Cu3/JmbhsDo7fcAJq4s9h27Ew==}
+
+  vee-validate@4.15.0:
+    resolution: {integrity: sha512-PGJh1QCFwCBjbHu5aN6vB8macYVWrajbDvgo1Y/8fz9n/RVIkLmZCJDpUgu7+mUmCOPMxeyq7vXUOhbwAqdXcA==}
+    peerDependencies:
+      vue: ^3.4.26
 
   vite-hot-client@0.2.4:
     resolution: {integrity: sha512-a1nzURqO7DDmnXqabFOliz908FRmIppkBKsJthS8rbe8hBEXwEwe4C3Pp33Z1JoFCYfVL4kTOMLKk0ZZxREIeA==}
@@ -3908,6 +3949,9 @@ packages:
   yoctocolors@2.1.1:
     resolution: {integrity: sha512-GQHQqAopRhwU8Kt1DDM8NjibDXHC8eoh1erhGAJPEyveY9qqVeXvVikNKrDz69sHowPMorbPUrH/mx8c50eiBQ==}
     engines: {node: '>=18'}
+
+  yup@1.6.1:
+    resolution: {integrity: sha512-JED8pB50qbA4FOkDol0bYF/p60qSEDQqBD0/qeIrUCG1KbPBIQ776fCUNb9ldbPcSTxA69g/47XTo4TqWiuXOA==}
 
   zhead@2.2.4:
     resolution: {integrity: sha512-8F0OI5dpWIA5IGG5NHUg9staDwz/ZPxZtvGVf01j7vHqSyZ0raHY+78atOVxRqb73AotX22uV1pXt3gYSstGag==}
@@ -5216,6 +5260,24 @@ snapshots:
       unhead: 1.11.19
       vue: 3.5.13(typescript@5.7.3)
 
+  '@vee-validate/nuxt@4.15.0(magicast@0.3.5)(vue@3.5.13(typescript@5.7.3))':
+    dependencies:
+      '@nuxt/kit': 3.15.4(magicast@0.3.5)
+      local-pkg: 0.5.1
+      vee-validate: 4.15.0(vue@3.5.13(typescript@5.7.3))
+    transitivePeerDependencies:
+      - magicast
+      - supports-color
+      - vue
+
+  '@vee-validate/yup@4.15.0(vue@3.5.13(typescript@5.7.3))(yup@1.6.1)':
+    dependencies:
+      type-fest: 4.35.0
+      vee-validate: 4.15.0(vue@3.5.13(typescript@5.7.3))
+      yup: 1.6.1
+    transitivePeerDependencies:
+      - vue
+
   '@vercel/nft@0.27.10(rollup@4.34.8)':
     dependencies:
       '@mapbox/node-pre-gyp': 2.0.0
@@ -5323,6 +5385,10 @@ snapshots:
 
   '@vue/devtools-api@6.6.4': {}
 
+  '@vue/devtools-api@7.7.2':
+    dependencies:
+      '@vue/devtools-kit': 7.7.2
+
   '@vue/devtools-core@7.6.8(vite@6.1.1(@types/node@22.7.5)(jiti@2.4.2)(terser@5.34.1)(yaml@2.7.0))(vue@3.5.13(typescript@5.7.3))':
     dependencies:
       '@vue/devtools-kit': 7.6.8
@@ -5336,6 +5402,16 @@ snapshots:
       - vite
 
   '@vue/devtools-kit@7.6.8':
+    dependencies:
+      '@vue/devtools-shared': 7.7.2
+      birpc: 0.2.19
+      hookable: 5.5.3
+      mitt: 3.0.1
+      perfect-debounce: 1.0.0
+      speakingurl: 14.0.1
+      superjson: 2.2.1
+
+  '@vue/devtools-kit@7.7.2':
     dependencies:
       '@vue/devtools-shared': 7.7.2
       birpc: 0.2.19
@@ -7425,6 +7501,8 @@ snapshots:
       kleur: 3.0.3
       sisteransi: 1.0.5
 
+  property-expr@2.0.6: {}
+
   protocols@2.0.1: {}
 
   punycode@2.3.1: {}
@@ -7850,6 +7928,8 @@ snapshots:
     dependencies:
       any-promise: 1.3.0
 
+  tiny-case@1.0.3: {}
+
   tiny-invariant@1.3.3: {}
 
   tinyexec@0.3.2: {}
@@ -7872,6 +7952,8 @@ snapshots:
 
   toidentifier@1.0.1: {}
 
+  toposort@2.0.2: {}
+
   tosource@2.0.0-alpha.3: {}
 
   totalist@3.0.1: {}
@@ -7893,6 +7975,8 @@ snapshots:
   type-fest@0.20.2: {}
 
   type-fest@0.21.3: {}
+
+  type-fest@2.19.0: {}
 
   type-fest@4.35.0: {}
 
@@ -8103,6 +8187,12 @@ snapshots:
     dependencies:
       spdx-correct: 3.2.0
       spdx-expression-parse: 3.0.1
+
+  vee-validate@4.15.0(vue@3.5.13(typescript@5.7.3)):
+    dependencies:
+      '@vue/devtools-api': 7.7.2
+      type-fest: 4.35.0
+      vue: 3.5.13(typescript@5.7.3)
 
   vite-hot-client@0.2.4(vite@6.1.1(@types/node@22.7.5)(jiti@2.4.2)(terser@5.34.1)(yaml@2.7.0)):
     dependencies:
@@ -8332,6 +8422,13 @@ snapshots:
   yocto-queue@1.1.1: {}
 
   yoctocolors@2.1.1: {}
+
+  yup@1.6.1:
+    dependencies:
+      property-expr: 2.0.6
+      tiny-case: 1.0.3
+      toposort: 2.0.2
+      type-fest: 2.19.0
 
   zhead@2.2.4: {}
 
