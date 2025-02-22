@@ -1,0 +1,10 @@
+{
+  "entry": "i18n/locales/en.json",
+  "entryLocale": "en_US",
+  "output": "i18n/locales",
+  "outputLocales": [
+    "en",
+    "es",
+    "fr"
+  ]
+}

@@ -1,15 +1,21 @@
 {
   "signUp": {
-    "title": "Registrarse",
     "email": "Correo electrónico",
+    "optionalAgreement": "Quiero recibir actualizaciones y anuncios de productos ocasionales",
     "password": "Contraseña",
-    "optionalAgreement": "Quiero recibir actualizaciones y anuncios ocasionales del producto",
-    "submit": "Registrarse",
-    "emailRequired": "El correo electrónico es obligatorio",
-    "passwordRequired": "La contraseña es obligatoria"
+    "submit": "Regístrate",
+    "title": "Regístrate"
   },
   "signUpSuccess": {
-    "title": "Éxito",
-    "message": "¡Te has registrado con éxito!"
+    "message": "¡Te has registrado con éxito!",
+    "title": "Éxito"
+  },
+  "validation": {
+    "email": "El correo electrónico debe ser un correo electrónico válido",
+    "password": "La contraseña debe tener al menos 8 caracteres",
+    "required": {
+      "email": "El correo electrónico es obligatorio",
+      "password": "La contraseña es obligatoria"
+    }
   }
 }
