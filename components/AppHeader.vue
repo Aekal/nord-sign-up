@@ -1,7 +1,7 @@
 <template>
   <provet-header>
     <NuxtLink class="logo-link n-stack-horizontal n-gap-s n-typescale-l" to="/">
-      <provet-avatar name="Laura Williams" size="m" variant="square">S</provet-avatar>
+      <provet-avatar size="m" variant="square">S</provet-avatar>
       Sample project
     </NuxtLink>
   </provet-header>

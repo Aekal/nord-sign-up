@@ -1,29 +1,29 @@
 <script setup lang="ts">
-import type { Input } from "@provetcloud/web-components";
+import type { Input } from "@provetcloud/web-components"
 import { object, string } from 'yup'
 
-const emailInputRef = ref<Input>();
-const optionalAgreement = ref<boolean>(false);
-const isPasswordVisible = ref<boolean>(false);
-const passwordIconName = computed(() => isPasswordVisible.value ? 'interface-edit-off' : 'interface-edit-on');
+const emailInputRef = ref<Input>()
+const optionalAgreement = ref<boolean>(false)
+const isPasswordVisible = ref<boolean>(false)
+const passwordIconName = computed(() => isPasswordVisible.value ? 'interface-edit-off' : 'interface-edit-on')
 
 const { errors, defineField, handleSubmit } = useForm({
   validationSchema: object({
     email: string().email('validation.email').required('validation.required.email'),
     password: string().min(8, 'validation.password').required('validation.required.password')
   }),
-});
-const [email] = defineField('email');
-const [password] = defineField('password');
+})
+const [email] = defineField('email')
+const [password] = defineField('password')
 
 const onSubmit = handleSubmit(() => {
   localStorage.setItem('formSubmitted', 'true')
-  navigateTo({ name: 'success' });
-});
+  navigateTo({ name: 'success' })
+})
 
 onMounted(() => {
   nextTick(() => {
-    emailInputRef.value?.focus();
+    emailInputRef.value?.focus()
   })
 })
 </script>

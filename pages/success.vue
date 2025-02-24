@@ -2,6 +2,9 @@
 definePageMeta({
   middleware: ['form-submitted'],
 })
+useSeoMeta({
+  title: 'Success | Nord Sign Up',
+})
 </script>
 
 <template>
