@@ -4,8 +4,7 @@
     "optionalAgreement": "I want to receive occasional product updates and announcements",
     "password": "Password",
     "submit": "Sign Up",
-    "title": "Sign Up",
-    "togglePasswordVisibility": "Toggle password visibility"
+    "title": "Sign Up"
   },
   "signUpSuccess": {
     "message": "You've successfully signed up!",

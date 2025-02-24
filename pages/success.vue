@@ -4,6 +4,7 @@ definePageMeta({
 })
 useSeoMeta({
   title: 'Success | Nord Sign Up',
+  description: 'You have successfully signed up for Nord',
 })
 </script>
 
